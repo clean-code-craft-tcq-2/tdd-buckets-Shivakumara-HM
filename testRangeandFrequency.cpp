@@ -4,12 +4,26 @@
 #include "catch.hpp"
 #include "RangeandFrequency.h"
 
-TEST_CASE("Read No of samples from 4-5 range")
+int TotalNoOfSamples=0;
+
+
+/*Reading occurance betweeen 5-10 range */
+TEST_CASE("Read No of samples from 5-10 range")
 {
- assert(ReadNoofSamples(4,5)==2); 
+ TotalNoOfSamples=ReadNoofSamples(5,10);
+ REQUIRE(TotalNoOfSamples == 2);
 }
 
-TEST_CASE("Read No of samples from 10-12 range")
+/*Reading occurance betweeen 3-5 range */
+TEST_CASE("Read No of samples from 3-5 range")
 {
- assert(ReadNoofSamples(10,12)==3);
+ TotalNoOfSamples=ReadNoofSamples(3,5);
+ REQUIRE(TotalNoOfSamples == 4);
+}
+
+/*Reading occurance betweeen 3-12 range */
+TEST_CASE("Read No of samples from 3-12 range")
+{
+ TotalNoOfSamples=ReadNoofSamples(3,12);
+ REQUIRE(TotalNoOfSamples == 7);
 }
