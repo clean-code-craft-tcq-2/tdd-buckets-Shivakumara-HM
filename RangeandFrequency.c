@@ -6,6 +6,7 @@ int getfrequency(int *Samples)
   int lengthofinput;
   int comp = 1;
   int frequency;
+  currentrange range;
   range.min = Samples[0];
   range.max = Samples[1];
   
