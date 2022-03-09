@@ -10,7 +10,7 @@ int getfrequency(int *Samples)
   range.min = Samples[0];
   range.max = Samples[1];
   
-  lengthofinput = sizeof(Samples);
+  lengthofinput = sizeof(Samples) / sizeof(Samples[0]);
   for(int i=0; i<= lengthofinput; i++)
   {
      comp = Samples[i+1] - Samples[i];
