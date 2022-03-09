@@ -4,8 +4,8 @@
 currentrange getrange(int *Samples)
 {
   currentrange range;
-  range.min = findminvalue;
-  range.max = findmaxvalue;
+  range.min = findminvalue(Samples);
+  range.max = findmaxvalue(Samples);
   range.count = getfrequency(Samples);
   return range;
 }
