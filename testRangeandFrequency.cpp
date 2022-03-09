@@ -2,7 +2,7 @@
 
 #include "catch.hpp"
 #include "RangeandFrequency.h"
-int Samples[] = {4,5};
+int Samples[] = {3,3,5,4,10,11,12};
 
 TEST_CASE("test the frequency of samples") 
 {
