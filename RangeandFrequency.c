@@ -10,7 +10,7 @@ int getfrequency(int *Samples)
   range.min = Samples[0];
   range.max = Samples[1];
   
-  lengthofinput = sizeof(Samples) / sizeof(Samples[0]);
+  lengthofinput = sizeof(Samples);
   for(int i=0; i<= lengthofinput; i++)
   {
      comp = Samples[i+1] - Samples[i];
@@ -23,7 +23,7 @@ int getfrequency(int *Samples)
           frequency = 0;
         }
     }
-  printf("%d-%d, %d\n", range.min, range.max, range.count);
+  printf("%d-%d, %d\n", range.min, range.max, frequency);
   return frequency;
 }
 
