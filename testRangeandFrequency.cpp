@@ -2,10 +2,9 @@
 
 #include "catch.hpp"
 #include "RangeandFrequency.h"
-int Samples[7] = {3, 3, 5, 4, 10, 11, 12};
+int Samples[] = {4,5};
 
 TEST_CASE("test the current range and samples") 
 {
-  REQUIRE(getrange({4,5}) == {4,5}));
-  REQUIRE(getfrequency({4,5}) == 2);
+ REQUIRE(getfrequency(Samples) == 2);
 }
