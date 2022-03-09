@@ -4,7 +4,7 @@
 #include "RangeandFrequency.h"
 int Samples[] = {4,5};
 
-TEST_CASE("test the current range and samples") 
+TEST_CASE("test the frequency of samples") 
 {
  REQUIRE(getfrequency(Samples) == 2);
 }
