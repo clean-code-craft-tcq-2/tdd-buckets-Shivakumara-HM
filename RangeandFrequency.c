@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "RangeandFrequency.h"
 
-currentrange getrange(int *Samples)
+rangeandfrequency getrange(int *Samples)
 {
-  currentrange range;
-  range.min = findminvalue(Samples);
-  range.max = findmaxvalue(Samples);
+  crangeandfrequency range;
+  range.min = Samples[0];
+  range.max = Samples[1];
   range.count = getfrequency(Samples);
   return range;
 }
@@ -18,7 +18,7 @@ int getfrequency(int *Samples)
   lengthofinput = sizeof(Samples) / sizeof(Samples[0];
   for(i=0; i<= lengthofinput ;i++)
   {
-     comp = Samples[i+1] - CurrentSamples[i];
+     comp = Samples[i+1] - Samples[i];
      if((comp == 0) || (comp == 1) || (comp==2))
         {
           frequency++;
