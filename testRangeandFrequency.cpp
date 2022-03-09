@@ -6,10 +6,10 @@
 
 TEST_CASE("Read No of samples from 4-5 range")
 {
- Assert(ReadNoofSamples(4,5)==2); 
+ assert(ReadNoofSamples(4,5)==2); 
 }
 
 TEST_CASE("Read No of samples from 10-12 range")
 {
- Assert(ReadNoofSamples(10,12)==3);
+ assert(ReadNoofSamples(10,12)==3);
 }
