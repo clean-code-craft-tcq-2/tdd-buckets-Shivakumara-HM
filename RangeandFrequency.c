@@ -1,22 +1,14 @@
 #include <stdio.h>
 #include "RangeandFrequency.h"
 
-rangeandfrequency getrange(int *Samples)
-{
-  rangeandfrequency range;
-  range.min = Samples[0];
-  range.max = Samples[1];
-  range.count = getfrequency(Samples);
-  
-  printf("%d-%d, %d\n", range.min, range.max, range.count);
-  return range;
-}
-
 int getfrequency(int *Samples)
 {
   int lengthofinput;
   int comp = 1;
   int frequency;
+  range.min = Samples[0];
+  range.max = Samples[1];
+  
   lengthofinput = sizeof(Samples) / sizeof(Samples[0]);
   for(int i=0; i<= lengthofinput; i++)
   {
@@ -30,6 +22,7 @@ int getfrequency(int *Samples)
           frequency = 0;
         }
     }
+  printf("%d-%d, %d\n", range.min, range.max, range.count);
   return frequency;
 }
 
