@@ -2,9 +2,15 @@
 
 #include "catch.hpp"
 #include "RangeandFrequency.h"
-int Samples[7] = {3,3,5,4,10,11,12};
 
-TEST_CASE("test the frequency of samples") 
+TEST_CASE("Read No of samples from 4-5 range")
 {
- REQUIRE(getfrequency(Samples) == 2);
+ TotalNoOfSamples=ReadNoofSamples(4,5);
+ REQUIRE(TotalNoOfSamples == 2);
+}
+
+TEST_CASE("Read No of samples from 10-12 range")
+{
+ TotalNoOfSamples=ReadNoofSamples(10,12);
+ REQUIRE(TotalNoOfSamples == 3);
 }
