@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "RangeandSamples.h"
+#include "RangeandFrequency.h"
 
 currentrange getrange(int *Samples)
 {
