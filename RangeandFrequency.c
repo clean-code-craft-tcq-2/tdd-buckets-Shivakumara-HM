@@ -10,7 +10,6 @@ currentrange getrange(int *Samples)
   return range;
 }
 
-
 int getfrequency(int *Samples)
 {
   int lengthofinput;
