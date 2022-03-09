@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
 
 #include "catch.hpp"
+#include "RangeandFrequency.h"
 
 TEST_CASE("test the current range and samples") 
 {
