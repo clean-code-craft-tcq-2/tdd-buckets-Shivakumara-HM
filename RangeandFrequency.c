@@ -1,29 +1,33 @@
 #include <stdio.h>
 #include "RangeandFrequency.h"
-
-int getfrequency(int *Samples)
-{
-  int lengthofinput;
-  int comp = 1;
-  int frequency;
-  rangeandfrequency range;
-  range.min = Samples[0];
-  range.max = Samples[1];
   
-  lengthofinput = sizeof(Samples) / sizeof(Samples[0]);
-  for(int i=0; i<= lengthofinput; i++)
+int ReadNoofSamples(int *CurrentSamples , int TotalSamples ,int FromRange , int ToRange)
+{
+  int NoofOccurance=0;
+  for(int i=0;i<TotalSamples;i++)
   {
-     comp = Samples[i+1] - Samples[i];
-     if((comp == 0) || (comp == 1) || (comp==2))
-        {
-          frequency++;
-        }
-        else
-        {
-          frequency = 0;
-        }
+    if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
+    {
+      NoofOccurance++;
     }
-  printf("%d-%d, %d\n", range.min, range.max, frequency);
-  return frequency;
+    else
+    {
+      /*do nothing */
+    }
+  }
+  SendDataToPrint(FromRange ,ToRange ,NoofOccurance);
+  return NoofOccurance;
+}
+
+void PrintonConsole(char * InputData)
+{
+  printf("%s",InputData);
+}
+
+void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
+{
+  char PrintData[100];
+  sprintf(PrintData,"%d-%d,%d\n",FromRange,ToRange,TotalOccurance);
+  PrintonConsole(PrintData);
 }
 
