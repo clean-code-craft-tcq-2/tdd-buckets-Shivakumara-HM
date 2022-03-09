@@ -3,10 +3,12 @@
 
 rangeandfrequency getrange(int *Samples)
 {
-  crangeandfrequency range;
+  rangeandfrequency range;
   range.min = Samples[0];
   range.max = Samples[1];
   range.count = getfrequency(Samples);
+  
+  printf("%d-%d, %d\n", range.min, range.max, range.count);
   return range;
 }
 
