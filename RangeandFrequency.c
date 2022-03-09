@@ -17,7 +17,7 @@ int getfrequency(int *Samples)
   int lengthofinput;
   int comp = 1;
   int frequency;
-  lengthofinput = (sizeof(Samples) / sizeof(Samples[0]);
+  lengthofinput = sizeof(Samples) / sizeof(Samples[0]);
   for(i=0; i<= lengthofinput ;i++)
   {
      comp = Samples[i+1] - Samples[i];
