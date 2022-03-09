@@ -5,5 +5,4 @@ typedef struct
   int count;
 } rangeandfrequency;
 
-rangeandfrequency getrange(int *Samples);
 int getfrequency(int *Samples); 
