@@ -6,5 +6,5 @@ int Samples[] = {4,5};
 
 TEST_CASE("test the current range and samples") 
 {
- REQUIRE(getrange(Samples) == 2);
+ REQUIRE(getfrequency(Samples) == 2);
 }
