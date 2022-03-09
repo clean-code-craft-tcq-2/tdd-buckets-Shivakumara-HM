@@ -2,7 +2,6 @@
 
 #include "catch.hpp"
 #include "RangeandFrequency.h"
-int TotalNoOfSamples;
 
 TEST_CASE("Read No of samples from 4-5 range")
 {
