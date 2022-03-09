@@ -2,6 +2,7 @@
 
 #include "catch.hpp"
 #include "RangeandFrequency.h"
+int Samples[7] = {3, 3, 5, 4, 10, 11, 12};
 
 TEST_CASE("test the current range and samples") 
 {
