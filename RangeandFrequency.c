@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "RangeandFrequency.h"
 
+int CompareInputs (const void * firstInput, const void * secondInput) 
+{
+    return ( *(int*)firstInput - *(int*)secondInput );
+}
+
 int* SortArray(int *CurrentSamples, int NoOfSamples) 
 {
     qsort(CurrentSamples,NoOfSamples,sizeof(int),CompareInputs);
     return CurrentSamples;
-}
-
-int CompareInputs (const void * firstInput, const void * secondInput) 
-{
-    return ( *(int*)firstInput - *(int*)secondInput );
 }
 
 int SamplesRangeCount(int* countOfReadings)
