@@ -10,17 +10,17 @@ int CompareInputs (const void * firstInput, const void * secondInput)
 int* SortArray(int *CurrentSamples, int NoOfSamples) 
 {
     qsort(CurrentSamples,NoOfSamples,sizeof(int),CompareInputs);
-    return CurrentSamples;
+    return SortedCurrentSamples;
 }
 
-int SamplesRangeCount(int* CurrentSamples, int NoOfSamples)
+int SamplesRangeCount(int* SortedCurrentSamples, int NoOfSamples)
 {
   int NoofOccurance=0;
-  int FromRange = CurrentSamples[0];
-  int ToRange = CurrentSamples[NoOfSamples - 1];
+  int FromRange = SortedCurrentSamples[0];
+  int ToRange = SortedCurrentSamples[NoOfSamples - 1];
   for(int i=0;i<NoOfSamples;i++)
   {
-    if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
+    if((FromRange <= SortedCurrentSamples[i]) && (ToRange >= SortedCurrentSamples[i]))
     {
       NoofOccurance++;
     }
@@ -47,8 +47,8 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 
 int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
-  int *sortedArray = SortArray(CurrentSamples,NoOfSamples);
-  int NoOfSequenceSample = SamplesRangeCount(CurrentSamples,NoOfSamples);
+  int *SortedCurrentSamples = SortArray(CurrentSamples,NoOfSamples);
+  int NoOfSequenceSample = SamplesRangeCount(SortedCurrentSamples,NoOfSamples);
   
 }
 
