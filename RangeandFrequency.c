@@ -49,6 +49,7 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
   PrintonConsole(PrintData);
 }
 
+//main function
 int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
   int *SortedCurrentSamples = SortArray(CurrentSamples,NoOfSamples);
