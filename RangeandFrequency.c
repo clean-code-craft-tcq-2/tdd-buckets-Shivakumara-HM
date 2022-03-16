@@ -47,7 +47,6 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
   int *sortedArray = SortArray(CurrentSamples,NoOfSamples);
-  int *countOfReadings = CountOfElementsInArray(sortedArray,NoOfSamples);
   int NoOfSequenceSample = SamplesRangeCount(countOfReadings);
   
 }
