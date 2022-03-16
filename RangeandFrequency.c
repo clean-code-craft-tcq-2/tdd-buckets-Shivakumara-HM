@@ -13,7 +13,7 @@ int* SortArray(int *CurrentSamples, int NoOfSamples)
     return CurrentSamples;
 }
 
-int SamplesRangeCount(int* CurrentSamples)
+int SamplesRangeCount(int* CurrentSamples, int NoOfSamples)
 {
   int NoofOccurance=0;
   int FromRange = CurrentSamples[0];
@@ -48,7 +48,7 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
   int *sortedArray = SortArray(CurrentSamples,NoOfSamples);
-  int NoOfSequenceSample = SamplesRangeCount(CurrentSamples);
+  int NoOfSequenceSample = SamplesRangeCount(CurrentSamples,NoOfSamples);
   
 }
 
