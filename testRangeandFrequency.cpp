@@ -4,17 +4,12 @@
 #include "catch.hpp"
 #include "RangeandFrequency.h"
 
-int NoOfSamples=0;
+int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
 
-TEST_CASE("Read No of samples from 4-5 range")
+TEST_CASE("Read No of samples from range")
 {
- NoOfSamples=ReadNoofSamples(4,5);
+ int Samples = sizeof(CurrentSamples)/sizeof(CurrentSamples[0]);
+ NoOfSamples=ReadNoofSamples(CurrentSamples, Samples);
  REQUIRE(NoOfSamples == 2);
-}
-
-TEST_CASE("Read No of samples from 10-12 range")
-{
- NoOfSamples=ReadNoofSamples(10,12);
- REQUIRE(NoOfSamples == 3);
 }
 
