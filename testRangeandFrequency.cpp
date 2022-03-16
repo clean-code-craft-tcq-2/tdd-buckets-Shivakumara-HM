@@ -11,7 +11,7 @@ TEST_CASE("Read No of samples from range 3 to 5")
 {
  int Samples = sizeof(CurrentSamples1)/sizeof(CurrentSamples1[0]);
  int TotalNoOfSamples = ReadNoOfSamples(CurrentSamples1, Samples);
- REQUIRE(TotalNoOfSamples == 2);
+ REQUIRE(TotalNoOfSamples == 4);
 }
 
 TEST_CASE("Read No of samples from range 10 to 12")
