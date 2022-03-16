@@ -12,10 +12,12 @@ int CompareInputs (const void * firstInput, const void * secondInput)
     return ( *(int*)firstInput - *(int*)secondInput );
 }
 
-int ReadNoOfSamples(int FromRange , int ToRange)
+int SamplesRangeCount(int* countOfReadings)
 {
   int NoofOccurance=0;
-  for(int i=0;i<TotalSamples;i++)
+  int FromRange = CurrentSamples[0];
+  int ToRange = CurrentSamples[NoOfSamples - 1];
+  for(int i=0;i<NoOfSamples;i++)
   {
     if((FromRange <= CurrentSamples[i]) && (ToRange >= CurrentSamples[i]))
     {
@@ -45,6 +47,8 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
   int *sortedArray = SortArray(CurrentSamples,NoOfSamples);
+  int *countOfReadings = CountOfElementsInArray(sortedArray,NoOfSamples);
+  int NoOfSequenceSample = SamplesRangeCount(countOfReadings);
   
 }
 
