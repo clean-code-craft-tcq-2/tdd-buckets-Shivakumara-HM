@@ -10,6 +10,7 @@ int CompareInputs (const void * firstInput, const void * secondInput)
 int* SortArray(int *CurrentSamples, int NoOfSamples) 
 {
     qsort(CurrentSamples,NoOfSamples,sizeof(int),CompareInputs);
+    int* SortedCurrentSamples = CurrentSamples;
     return SortedCurrentSamples;
 }
 
