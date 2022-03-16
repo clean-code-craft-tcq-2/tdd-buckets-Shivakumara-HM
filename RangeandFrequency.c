@@ -1,11 +1,18 @@
 #include <stdio.h>
 #include "RangeandFrequency.h"
 
-int TotalNoOfSamples=0;
-int CurrentSamples[7] = {3, 3, 5, 4, 10, 11, 12};
-int TotalSamples=sizeof(CurrentSamples)/sizeof(CurrentSamples[0]);
-  
-int ReadNoofSamples(int FromRange , int ToRange)
+int* SortArray(int *CurrentSamples, int NoOfSamples) 
+{
+    qsort(CurrentSamples,NoOfSamples,sizeof(int),CompareInputs);
+    return CurrentSamples;
+}
+
+int CompareInputs (const void * firstInput, const void * secondInput) 
+{
+    return ( *(int*)firstInput - *(int*)secondInput );
+}
+
+int ReadNoOfSamples(int FromRange , int ToRange)
 {
   int NoofOccurance=0;
   for(int i=0;i<TotalSamples;i++)
@@ -33,5 +40,11 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
   char PrintData[100];
   sprintf(PrintData,"%d-%d,%d\n",FromRange,ToRange,TotalOccurance);
   PrintonConsole(PrintData);
+}
+
+int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
+{
+  int *sortedArray = SortArray(CurrentSamples,NoOfSamples);
+  
 }
 
