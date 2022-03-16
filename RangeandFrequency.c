@@ -50,6 +50,7 @@ int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
   int *SortedCurrentSamples = SortArray(CurrentSamples,NoOfSamples);
   int NoOfSequenceSample = SamplesRangeCount(SortedCurrentSamples,NoOfSamples);
+  return NoOfSequenceSample;
   
 }
 
