@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "RangeandFrequency.h"
 
+// Sorting the input samples
 int CompareInputs (const void * firstInput, const void * secondInput) 
 {
     return ( *(int*)firstInput - *(int*)secondInput );
@@ -14,6 +15,7 @@ int* SortArray(int *CurrentSamples, int NoOfSamples)
     return SortedCurrentSamples;
 }
 
+// find the min, max and number of occurances of the samples
 int SamplesRangeCount(int* SortedCurrentSamples, int NoOfSamples)
 {
   int NoofOccurance=0;
@@ -34,6 +36,7 @@ int SamplesRangeCount(int* SortedCurrentSamples, int NoOfSamples)
   return NoofOccurance;
 }
 
+//print the data on console
 void PrintonConsole(char * InputData)
 {
   printf("%s",InputData);
@@ -50,7 +53,6 @@ int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
   int *SortedCurrentSamples = SortArray(CurrentSamples,NoOfSamples);
   int NoOfSequenceSample = SamplesRangeCount(SortedCurrentSamples,NoOfSamples);
-  return NoOfSequenceSample;
-  
+  return NoOfSequenceSample;  
 }
 
