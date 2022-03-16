@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "RangeandFrequency.h"
 
 int CompareInputs (const void * firstInput, const void * secondInput) 
