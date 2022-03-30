@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include "RangeandFrequency.h"
 
+// Convert Analog to Digital
+int* ConvertA2D(int *Readings, int NumberOfSamples)
+{
+    for(int i=0;i<NumberOfSamples;i++)
+    {
+         if (Readings[i] >4094)
+         {
+             Readings[i] = 0 ; //assume the invalid sample as 0
+         }    
+        ConvertedDigitalArray[i] = (10* Readings[i] )/ 4094;
+        ConvertedDigitalArray[i] = round(ConvertedDigitalArray[i]);
+    }
+    return ConvertedDigitalArray;
+}
+
 // Sorting the input samples
 int CompareInputs (const void * firstInput, const void * secondInput) 
 {
@@ -52,6 +67,7 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 //main function
 int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
 {
+  int *CovertedA2DSample = ConvertA2D(CurrentSamples, NoOfSamples);
   int *SortedCurrentSamples = SortArray(CurrentSamples,NoOfSamples);
   int NoOfSequenceSample = SamplesRangeCount(SortedCurrentSamples,NoOfSamples);
   return NoOfSequenceSample;  
