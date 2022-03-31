@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "RangeandFrequency.h"
+int *ConvertedDigitalArray;
 
 // Convert Analog to Digital
 int* ConvertA2D(int *Readings, int NoOfSamples)
