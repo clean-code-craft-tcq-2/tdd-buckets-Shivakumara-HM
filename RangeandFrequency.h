@@ -1,3 +1,4 @@
+ConvertedDigitalArray = (int*)calloc(NumberOfSamples, sizeof(int));
 int ReadNoOfSamples(int *Readings, int NoOfSamples);
 int* ConvertA2D(int *Readings, int NoOfSamples);
 int* SortArray(int *CurrentSamples, int NoOfSamples);
