@@ -32,7 +32,7 @@ TEST_CASE("Read No of samples from range 3 to 12")
 TEST_CASE("Read No of sequence samples from an array of 12 consecutive samples")
 {
  int Samples = sizeof(CurrentAnalogSamples)/sizeof(CurrentAnalogSamples[0]);
- int TotalNoOfSamples=ReadNoOfSamples(CurrentAnalogSamples, 12);
+ int TotalNoOfSamples=ReadNoOfSamples(CurrentAnalogSamples, Samples);
  REQUIRE(TotalNoOfSamples == 1);
 }
 
