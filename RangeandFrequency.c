@@ -3,9 +3,9 @@
 #include "RangeandFrequency.h"
 
 // Convert Analog to Digital
-int* ConvertA2D(int *Readings, int NumberOfSamples)
+int* ConvertA2D(int *Readings, int NoOfSamples)
 {
-    for(int i=0;i<NumberOfSamples;i++)
+    for(int i=0;i<NoOfSamples;i++)
     {
          if (Readings[i] >4094)
          {
@@ -65,10 +65,10 @@ void SendDataToPrint(int FromRange , int ToRange ,int TotalOccurance )
 }
 
 //main function
-int ReadNoOfSamples(int *CurrentSamples, int NoOfSamples)
+int ReadNoOfSamples(int *Readings, int NoOfSamples)
 {
-  int *CovertedA2DSample = ConvertA2D(CurrentSamples, NoOfSamples);
-  int *SortedCurrentSamples = SortArray(CurrentSamples,NoOfSamples);
+  int *CovertedA2DSample = ConvertA2D(Readings, NoOfSamples);
+  int *SortedCurrentSamples = SortArray(CovertedA2DSample,NoOfSamples);
   int NoOfSequenceSample = SamplesRangeCount(SortedCurrentSamples,NoOfSamples);
   return NoOfSequenceSample;  
 }
