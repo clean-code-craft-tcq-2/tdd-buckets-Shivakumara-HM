@@ -6,7 +6,7 @@
 // Convert Analog to Digital
 int* ConvertA2D(int *Readings, int NoOfSamples)
 {
-    int *ConvertedDigitalArray[NoOfSamples];
+    int ConvertedDigitalArray[NoOfSamples];
     for(int i=0;i<NoOfSamples;i++)
     {
          if (Readings[i] >4094)
