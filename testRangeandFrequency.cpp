@@ -9,7 +9,7 @@ TEST_CASE("Read No of sequence samples from an array of 12 consecutive samples")
 {
  int Samples = sizeof(CurrentAnalogSamples)/sizeof(CurrentAnalogSamples[0]);
  int TotalNoOfSamples=ReadNoOfSamples(CurrentAnalogSamples, Samples);
- REQUIRE(TotalNoOfSamples == 1);
+ REQUIRE(TotalNoOfSamples == 12);
 }
 
 
